@@ -1,8 +1,11 @@
-interface Quize {
+interface Quiz {
   en_q: string;
   de_q: string;
   options: Array<string>;
-  answer: string;
+  answer: {
+    en: string;
+    de: string;
+  };
 }
 
-type Quizes = Array<Quize>;
+type Quizes = Array<Quiz>;
