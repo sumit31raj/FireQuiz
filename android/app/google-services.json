@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "385139197034",
+    "project_id": "firequiz-d2a4f",
+    "storage_bucket": "firequiz-d2a4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385139197034:android:c4ff70f0ce91a909283613",
+        "android_client_info": {
+          "package_name": "com.firequiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385139197034-uhju0ho67t1nflds04sf3i87hs467j2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARQR_2CR3FbyT3S6xM2ZzXfG_az8Xzz0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385139197034-uhju0ho67t1nflds04sf3i87hs467j2p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "385139197034-82a6gfhcehv8quim1tsskig0d2479ggh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.FireQuiz"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
