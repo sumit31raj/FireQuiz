@@ -1,0 +1,19 @@
+{
+  "en": {
+    "shared": {
+      "continue": "Continue"
+    },
+    "components": {
+      "alertView": {
+        "greatJob": "Great Job!",
+        "answer": "Answer"
+      }
+    },
+    "screens": {
+      "home": {
+        "checkAnswer": "Check Answer",
+        "fillWord": "Fill in the missing word"
+      }
+    }
+  }
+}
