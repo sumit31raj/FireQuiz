@@ -5,6 +5,7 @@ import { Colors, Size, Theme } from '../theme';
 
 interface QuizQuestionProps {
   quiz: Quiz;
+  answerShown?: boolean;
   option: string | null;
 }
 
@@ -14,7 +15,7 @@ const getRegex = (word: string) => {
   return new RegExp(`(${word})`, 'gi');
 };
 
-const QuizQuestion: React.FC<QuizQuestionProps> = ({ quiz, option }) => {
+const QuizQuestion: React.FC<QuizQuestionProps> = ({ quiz, option, answerShown }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.enQuestion}>
@@ -33,9 +34,15 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ quiz, option }) => {
         {quiz.de_q.split(getRegex(delimeter)).map((word, index) => {
           if (delimeter === word) {
             if (option) {
-              return <OptionView key={index} text={option} />;
+              const type = answerShown
+                ? option === quiz.answer.de
+                  ? 'success'
+                  : 'error'
+                : undefined;
+
+              return <OptionView key={index} text={option} type={type} />;
             }
-            return <FillBlank key={index} textStyle={styles.deQuestion} length={20} />;
+            return <FillBlank key={index} textStyle={styles.deQuestion} length={10} />;
           } else {
             return (
               <Text key={index} style={styles.deQuestion}>
@@ -50,9 +57,12 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ quiz, option }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    marginHorizontal: Size[3],
+  },
   questionContainer: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
   },

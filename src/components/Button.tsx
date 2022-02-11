@@ -13,7 +13,7 @@ import { Colors, Size, Theme } from '../theme';
 
 interface ButtonProps {
   disabled?: boolean;
-  text: string | null;
+  text?: string | null;
   style?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
   onPress?: () => void;

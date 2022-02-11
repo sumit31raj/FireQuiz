@@ -51,7 +51,9 @@ const Home: React.FC<HomeProps> = () => {
       <ScrollView>
         <Text style={styles.fillWordSubTitle}>{t('fillWord')}</Text>
 
-        {currentQuiz && <QuizQuestion quiz={currentQuiz} option={option} />}
+        {currentQuiz && (
+          <QuizQuestion quiz={currentQuiz} option={option} answerShown={isAlerVisible} />
+        )}
 
         <View style={styles.optionContainer}>
           {currentQuiz?.options.map((text, index) => (
