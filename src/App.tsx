@@ -1,12 +1,12 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import './locales/initI18n';
+import { Home } from './screens';
 
-const App = () => {
-  return (
-    <View>
-      <Text>test</Text>
-    </View>
-  );
-};
+const App = () => (
+  <SafeAreaProvider>
+    <Home />
+  </SafeAreaProvider>
+);
 
 export default App;
