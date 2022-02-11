@@ -40,7 +40,14 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ quiz, option, answerShown }
                   : 'error'
                 : undefined;
 
-              return <OptionView key={index} text={option} type={type} />;
+              return (
+                <OptionView
+                  key={index}
+                  text={option}
+                  type={type}
+                  style={styles.optionView}
+                />
+              );
             }
             return <FillBlank key={index} textStyle={styles.deQuestion} length={10} />;
           } else {
@@ -81,6 +88,9 @@ const styles = StyleSheet.create({
     textTransform: 'capitalize',
     textDecorationLine: 'underline',
     textDecorationStyle: 'solid',
+  },
+  optionView: {
+    marginHorizontal: 0,
   },
   gradient: {
     height: Size[40],

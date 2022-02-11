@@ -37,12 +37,10 @@ const OptionView: React.FC<OptionViewProps> = props => {
 
   const isTypeAvailable = Boolean(props.type) ?? false;
 
-  console.log(isTypeAvailable);
-
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       {isTypeAvailable ? (
-        <Gradient type={props.type}>
+        <Gradient type={props.type} style={props.style}>
           <Text style={styles.gradientOptionText}>{props.text}</Text>
         </Gradient>
       ) : (

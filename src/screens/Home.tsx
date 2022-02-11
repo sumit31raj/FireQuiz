@@ -68,6 +68,7 @@ const Home: React.FC<HomeProps> = () => {
       </ScrollView>
 
       <Button
+        style={styles.continueButton}
         disabled={!option}
         text={option && t('checkAnswer')}
         onPress={onCheckAnswer}
@@ -105,6 +106,9 @@ const styles = StyleSheet.create({
   },
   disabledOption: {
     backgroundColor: `${Colors.white}88`,
+  },
+  continueButton: {
+    marginBottom: Size[10],
   },
 });
 
