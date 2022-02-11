@@ -12,7 +12,11 @@ const useQuizesHook = () => {
           newQuizes.push(quize.data());
         });
 
-        setQuizes(newQuizes);
+        if (newQuizes.length) {
+          setQuizes(newQuizes);
+        } else {
+          Firebase.instance.createDemoQuizes();
+        }
       },
     });
 
